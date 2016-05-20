@@ -1,0 +1,16 @@
+Hash
+	array hash_algos(void);
+	string hash($algitmo,$data)
+	TABLAS ARCOIRIS
+		cadena : algitmo
+		stringsininjeccionessql mysqli_real_escape_string($con,$string);
+	XSS
+		permanente peligrosos. el usuario manda etiquetas ejecutables de html. se usa la base de datos.
+		se evitan:
+			string htmlentities($string)
+			string htmlspecialchars($string)
+		temporal. solo te afecta a ti
+		
+	CrossSiteRequestForgery
+		falsifica una petición al servidor desde una pagina externa a nuestro sitio
+		
