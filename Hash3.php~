@@ -1,8 +1,6 @@
 <?php
 	$cadad=array();
-	$a=2;
-	$c=0;
-	$e=0;
+	$a=1;
 	if(isset($_POST["num"]))
 	{
 		$cad=str_split($_POST["num"]);
@@ -26,32 +24,14 @@
 				//x13 ≡ 10-(x1+3x2+x3+3x4+...+x11+3x12) (mod 10)
 				for($n=0;$n<12;$n++)
 				{
-					$b=$n%2;
-					if($b==1)
-					{
-						$miu[$c]=3*$cad[$n];
-						if($c>0)
-							$f=$f+$miu[$c];
-						else
-							$f=$miu[$c];
-						$c++;
-					}
-					else
-					{
-						$d[$e]=$cad[$n];
-						if($e>0)
-							$g=$g+$d[$e];
-						else
-							$g=$d[$e];
-						$e++;
-					}
+					$b=$cad[$n]%2;
+					var_dump($b);
+					if($b==0)
+						echo'es par';
 				}
-				$res=10-($f+$g)%10;
-				if($res==$cad[12])
-					echo 'es correcto';
-				else
-					echo' nop';
 			}
+			else
+				echo'fallaalgo';
 		}
 		else
 			echo'Falta algo';
