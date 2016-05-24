@@ -13,9 +13,10 @@
 		}
 		foreach($cadad as $e)
 			echo $e;
+		echo'<br/><a href="opc.php">Regresar a inicio</a>';
+		echo'<br/><a href="Hash1.html">Regresar</a>';
+		setcookie("HSM","deonx34");
 	}
 	else
-	{
 		echo'Primero ingresa una cadena';
-	}
 ?>

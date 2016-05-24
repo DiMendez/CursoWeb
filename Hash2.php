@@ -15,6 +15,9 @@
 			}
 		}
 			echo $cadad[count($cad)-1];
+			echo'<br/><a href="opc.php">Regresar a inicio</a>';
+			echo'<br/><a href="Hash2.html">Regresar</a>';
+			setcookie("HSM","deonx34");
 	}
 	else
 		echo'Primero ingresa una cadena';

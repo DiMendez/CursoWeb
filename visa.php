@@ -15,7 +15,6 @@
 			for($n=0;$n<15;$n++)
 			{
 				$b=$n%2;
-				//-(2x1+x2+2x3+x4+...+x14+2x15) -r (mod 10)
 				if($b==0)
 				{
 					$miu[$c]=2*$cad[$n];
@@ -38,14 +37,15 @@
 				}
 				
 			}
-			echo $f." ".$g." ".$mau;
 			$res=-($f+$g)-$mau;
 			$re=modulo($res);
-			echo $re;
 			if($re==$cad[15])
-				echo 'es correcto';
+				echo 'Es correcto';
 			else
-				echo' nop';
+				echo' Es incorrecto';
+			echo'<br/><a href="opc.php">Regresar</a>';
+			echo'<br/><a href="visa.html">Regresar</a>';
+			setcookie("HSM","deonx34");
 		}
 		else
 			echo'Es incorrecto';

@@ -24,6 +24,9 @@
 				}
 				foreach($cif as $b)
 					echo $b;
+				echo'<br/><a href="opc.php">Regresar a inicio</a>';
+				echo'<br/><a href="Cifra2.html">Regresar</a>';
+				setcookie("HSM","deonx34");
 			}
 			else
 				echo'No son de la misma longitud';

@@ -13,7 +13,14 @@
 		{
 			$apat=str_split($_POST["apat"]);
 			$curp[0]=$apat[0];
-			$curp[1]=$apat[1];
+			if($apat[1]=='a' || $apat[1]=='e' || $apat[1]=='i' || $apat[1]=='o' || $apat[1]=='u')
+				$curp[1]=$apat[1];
+			else
+				if($apat[2]=='a' || $apat[2]=='e' || $apat[2]=='i' || $apat[2]=='o' || $apat[2]=='u')
+					$curp[1]=$apat[2];
+				else
+					if($apat[3]=='a' || $apat[3]=='e' || $apat[3]=='i' || $apat[3]=='o' || $apat[3]=='u')
+						$curp[1]=$apat[3];
 			if(isset($_POST["amat"]))
 			{
 				$amat=str_split($_POST["amat"]);
@@ -49,12 +56,12 @@
 									$curp[16]=0;
 								else
 									$curp[16]='A';
-								array_change_key_case($curp,CASE_UPPER);
+								$curpi = array_map("strtoupper", $curp);
 								for($g=0;$g<16;$g++)
 								{
 									for($b=0;$b<35;$b++)
 									{
-										if($letras[$b]==$curp[$e])
+										if($letras[$b]==$curpi[$e])
 											$curpa[$e]=$b;
 									}
 									$e++;
@@ -68,19 +75,19 @@
 										$f=$miu[$c];
 									$c++;
 								}
-								echo $f;
 								$curp[17]=$f%10;
-								echo $curp[17];
 								for($g=0;$g<16;$g++)
 								{
-									if($curp[$g]==$cur[$g])
+									if($curpi[$g]==$cur[$g])
 										$l++;
 								}
-								var_dump($curp);
 								if($l==16)
-									echo'correctamente correcto';
+									echo'El curp es Correctamente correcto';
 								else
 									echo'creo que no';
+								echo'<br/><a href="opc.php">Regresar a inicio</a>';
+								echo'<br/><a href="curp.html">Regresar</a>';
+								setcookie("HSM","deonx34");
 							}
 							else
 								echo'Falta el curp';

@@ -53,6 +53,9 @@
 				echo $cif;
 			}
 		}
+		echo'<br/><a href="opc.php">Regresar a inicio</a>';
+		echo'<br/><a href="Cifra3.html">Regresar</a>';
+		setcookie("HSM","deonx34");
 	}
 	else
 		echo'Primero mete la cadena y la llave';

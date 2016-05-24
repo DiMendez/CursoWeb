@@ -33,7 +33,8 @@
 				foreach($cad as $e)
 					echo $e;
 			}
-			
+			echo'<br/><a href="opc.php">Regresar</a>';
+			setcookie("HSM","deonx34");
 		}
 		else
 			echo'Primero mete la cadena y la llave';
